@@ -1,5 +1,6 @@
-# Launcher8
-Application launcher for Windows
+# <img src="https://raw.githubusercontent.com/jetspiking/Launcher8/main/Screenshots/Launcher8.png" width="64" height="64"> Launcher8
+
+<img src="https://raw.githubusercontent.com/jetspiking/Launcher8/main/Screenshots/Launcher8_0.png" width="166" height="360"> <https://raw.githubusercontent.com/jetspiking/Launcher8/main/Screenshots/Launcher8_1.png" width="166" height="360">
 
 # Description
 Launcher8 is an application launcher in the style of the Windows Phone 8 app list. The application should run on most versions of the Microsoft Windows operating system.
