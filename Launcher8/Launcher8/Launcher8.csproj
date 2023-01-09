@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <DebugType>none</DebugType>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <EnableNETAnalyzers>False</EnableNETAnalyzers>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <ApplicationIcon>Resources\Icon\Launcher8.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Remove="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.WindowsAPICodePack.dll" />
+    <None Remove="Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll" />
+    <None Remove="Microsoft.WindowsAPICodePack.Sensors.dll" />
+    <None Remove="Microsoft.WindowsAPICodePack.Shell.dll" />
+    <None Remove="Resources\Images\Dark\appbar.tiles.nine.png" />
+    <None Remove="Resources\Images\Light\appbar.tiles.nine.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Icon\Launcher8.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Microsoft.WindowsAPICodePack.dll" />
+    <EmbeddedResource Include="Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll" />
+    <EmbeddedResource Include="Microsoft.WindowsAPICodePack.Sensors.dll" />
+    <EmbeddedResource Include="Microsoft.WindowsAPICodePack.Shell.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAPICodePack">
+      <HintPath>Microsoft.WindowsAPICodePack.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ExtendedLinguisticServices">
+      <HintPath>Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Sensors">
+      <HintPath>Microsoft.WindowsAPICodePack.Sensors.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\Dark\appbar.tiles.nine.png" />
+    <Resource Include="Resources\Images\Light\appbar.tiles.nine.png" />
+  </ItemGroup>
+
+</Project>
